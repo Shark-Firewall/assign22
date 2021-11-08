@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">assign22</string>
+    <string name="inputtext">Enter String</string>
+    <string name="btntext">Submit</string>
+</resources>
