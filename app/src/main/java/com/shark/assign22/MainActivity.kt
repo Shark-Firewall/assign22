@@ -7,6 +7,11 @@ import android.widget.EditText
 import androidx.appcompat.app.AppCompatActivity
 
 class MainActivity : AppCompatActivity() {
+
+    companion object{
+        const val KEY_NAME="name"
+    }
+
     lateinit var editText: EditText
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -18,7 +23,7 @@ class MainActivity : AppCompatActivity() {
 
     fun onButtonClicked(view: View) {
         val i = Intent(this, MainActivity2::class.java).apply {
-            putExtra("Data",editText.text.toString())
+            putExtra(KEY_NAME,send(editText.text.toString()))
         }
         startActivity(i)
     }
